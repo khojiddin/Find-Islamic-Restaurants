@@ -28,7 +28,7 @@ class Restaurant(db.Model):
     created_time = db.Column(db.String(50))
 
 
-db.create_all()
+# db.create_all()
 
 
 @app.route('/')
