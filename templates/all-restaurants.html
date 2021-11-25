@@ -1,0 +1,31 @@
+{% include 'header.html'%}
+
+<section class="cards">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for restaurant in restaurants: %}
+  <div class="col">
+    <div class="card h-100">
+      {% if restaurant.img_url:%}
+      <img src="{{restaurant.img_url}}" class="card-img-top" alt="...">
+      {% else: %}
+      <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80">
+      {% endif %}
+      <div class="card-body">
+        <h5 class="card-title">Name: {{restaurant.name}}</h5>
+        <h5 class="card-text">City: {{restaurant.city}}</h5>
+        <p class="card-text">Address: {{restaurant.address}}</p>
+        <p class="card-text">Working time: {{restaurant.working_hours}}</p>
+        <a href="{{restaurant.map_url}}">click here to find on maps.</a>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Food: {{restaurant.food_status}}</small>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</section>
+
+
+
+{% include 'footer.html' %}

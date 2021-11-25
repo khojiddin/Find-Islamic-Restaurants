@@ -1,0 +1,54 @@
+{% import 'bootstrap/wtf.html' as wtf%}
+{% include 'header.html' %}
+<div class="container-fluid" style="padding:5%; background-image: url(static/images/bg.jpg)">
+    <h1> New Islamic Restaurant.</h1>
+    <div class="row" style="padding:15%">
+        <form class="row g-3" method="post">
+          <div class="col-md-4">
+            <label for="validationDefault01" class="form-label fs-4">Restaurant Name</label>
+            <input name="restaurant_name" type="text" class="form-control" id="validationDefault01" placeholder="Name of the restaurant" required>
+          </div>
+          <div class="col-md-4">
+            <label for="validationDefault02" class="form-label fs-4">City</label>
+            <input name="city_name" type="text" class="form-control" id="validationDefault02" placeholder="City name" required>
+          </div>
+          <div class="col-md-4">
+            <label for="validationDefaultUsername" class="form-label fs-4">Map URL</label>
+            <div class="input-group">
+              <span class="input-group-text" id="inputGroupPrepend2">URL</span>
+              <input name="map_url" type="url" class="form-control" id="validationDefaultUsername" placeholder="Map URL" aria-describedby="inputGroupPrepend2">
+            </div>
+          </div>
+          <div class="col-md-5">
+            <label for="validationDefault03" class="form-label fs-4">Address</label>
+            <input name="address" type="text" class="form-control" placeholder="Full address" id="validationDefault03" required>
+          </div>
+          <div class="col-md-2">
+            <label for="validationDefault03" class="form-label fs-4">Opening hours</label>
+            <input name="working-hours" type="text" class="form-control" placeholder="08:00-21:00" id="validationDefault06">
+          </div>
+          <div class="col-md-2">
+            <label for="validationDefault04" class="form-label fs-4">Food Status</label>
+            <select  name="status" class="form-select" id="validationDefault04" required>
+              <option  selected disabled>choose...</option>
+                <option>Halal</option>
+                <option>Not sure</option>
+                <option>unknown</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="validationDefault05" class="form-label fs-4">Image URL</label>
+            <div class="input-group">
+              <span class="input-group-text" id="inputGroupPrepend05">URL</span>
+              <input name="img_url" type="url" class="form-control" placeholder="Image URL" id="validationDefault05">
+            </div>
+          </div>
+
+          <div class="col-12">
+            <button class="btn btn-success btn-lg" type="submit">submit</button>
+          </div>
+        </form>
+    </div>
+</div>
+{% include 'footer.html' %}
+

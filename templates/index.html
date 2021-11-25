@@ -1,0 +1,60 @@
+{% include "header.html" %}
+ <header class="masthead" style="padding:5%; background:#F0E9D2">
+    <div class="overlay"></div>
+    <div class="container scaled ">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+              <h5>Are you muslim? And in China?</h5>
+              <h5> Then you have come to the right place!</h5>
+            <h1>SJ-Muslim Friendly</h1>
+            <span class="subheading text-dark">
+                Find Islamic restaurants in your city, discover places to enjoy Halal food.
+            </span>
+          </div>
+            <form action="{{url_for('show_all')}}">
+                 <div class="d-grid gap-2 col-6 mx-auto" style="padding:10% 0">
+                    <button class="btn btn-success" type="submit"  style="padding:4%">Explore Restaurants</button>
+                </div>
+            </form>
+            <h6>
+            <span class="subheading text-dark">
+                Can't find your city? :(
+            </span>
+            </h6>
+        </div>
+          <a href="{{url_for('add')}}" class="link-info">Please, suggest places in your city.</a>
+      </div>
+    </div>
+  </header>
+<section id="about">
+   <div class="container-fluid info">
+    <div class="row">
+        <div class="col-lg-4 info-data">
+            <h2>
+                <img src="https://img.icons8.com/ios-filled/64/000000/halal-sign.png"/>
+                Be productive.</h2>
+            <h2>Eat halal food everyday!</h2>
+            <p>Browser based, so you don't have to install anything! just discover places.</p>
+        </div>
+        <div class="col-lg-4 info-data">
+            <h2>
+             <img src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-share-interface-kiranshastry-gradient-kiranshastry.png"/>
+                Share with your friends.
+            </h2>
+            <p>Help others Muslim brother and sisters to find restaurants that serve halal food.</p>
+        </div>
+        <div class="col-lg-4 info-data">
+            <h2>
+                <img src="https://img.icons8.com/external-icongeek26-outline-colour-icongeek26/64/000000/external-device-devices-icongeek26-outline-colour-icongeek26-1.png"/>
+                Access from any device.
+            </h2>
+            <p>Just open the app. No sign up need but be honest! respect others and be truthful!</p>
+        </div>
+    </div>
+</div>
+</section>
+<section id="">
+
+</section>
+{% include "footer.html" %}

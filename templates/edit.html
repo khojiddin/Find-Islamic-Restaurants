@@ -1,0 +1,54 @@
+{% include 'header.html' %}
+
+<section class="cards">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for restaurant in restaurants: %}
+  <div class="col">
+    <div class="card h-100">
+      {% if restaurant.img_url:%}
+      <img src="{{restaurant.img_url}}" class="card-img-top" alt="...">
+      {% else: %}
+      <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80">
+      {% endif %}
+      <form action="{{url_for('edit', res_id=restaurant.id)}}" method="post">
+          <div class="card-body">
+              <div class="input-group">
+              <span class="input-group-text edit-span">Restaurant Name</span>
+              <input onChange="this.form.submit()" id="RestaurantName" value="{{restaurant.name}}" type="text" aria-describedby="inputGroup-sizing-lg" name="restaurant_name" class="edit_restaurant" required> <br>
+              </div>
+              <div class="input-group">
+              <span class="input-group-text edit-span">City</span>
+              <input onChange="this.form.submit()" id="Restaurant_city" value="{{restaurant.city}}" type="text" aria-describedby="inputGroup-sizing-lg" name="restaurant_city" class="edit_restaurant" required><br>
+              </div>
+              <div class="input-group">
+              <span class="input-group-text edit-span">Address</span>
+              <input onChange="this.form.submit()" id="Restaurant_address" value="{{restaurant.address}}" type="text" aria-describedby="inputGroup-sizing-lg" name="restaurant_address" class="edit_restaurant" required><br>
+              </div>
+              <div class="input-group">
+              <span class="input-group-text edit-span">Working Hours</span>
+              <input onChange="this.form.submit()" id="Restaurant_working_time" value="{{restaurant.working_hours}}" type="text" aria-describedby="inputGroup-sizing-lg" name="restaurant_working_time" class="edit_restaurant" required><br>
+              </div>
+              <div class="input-group">
+              <span class="input-group-text edit-span">Map URL</span>
+              <input onChange="this.form.submit()" id="Restaurant_map_url" value="{{restaurant.map_url}}" type="text" aria-describedby="inputGroup-sizing-lg" name="restaurant_map_url" class="edit_restaurant" required><br>
+              </div>
+              <div class="input-group">
+              <span class="input-group-text edit-span">Image URl</span>
+              <input onChange="this.form.submit()" id="Restaurant_img_url" value="{{restaurant.img_url}}" type="text" aria-describedby="inputGroup-sizing-lg" name="restaurant_img_url" class="edit_restaurant" required><br>
+              </div>
+           </div>
+            <div class="card-footer">
+                <div class="input-group">
+              <span class="input-group-text edit-span">Food status</span>
+                <input  onChange="this.form.submit()" id="Restaurant_food_status" value="{{restaurant.food_status}}" type="text" aria-describedby="inputGroup-sizing-lg" name="restaurant_food_status" class="edit_restaurant" required>
+                </div>
+                <a href="{{url_for('delete', res_id=restaurant.id)}}"> Delete this restaurant.</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</section>
+
+{% include 'footer.html' %}

@@ -1,0 +1,62 @@
+
+body{
+text-align: center;
+font-family: vandana, sans-serif;
+color:white;
+background-color: #EDEDED;
+}
+h1,
+h3,
+h4{
+  font-weight: 800;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #2E4C6D;
+  font-size: 5vw;
+  margin: 5%, auto 0 auto;
+}
+
+h3, h2{
+  color: #105652;
+  font-family: serif;
+}
+h3{
+  color: #FBF3E4;
+  font-family: serif;
+}
+p{
+  color: #105652;
+  line-height: 2;
+}
+h5{
+color: #105652;
+}
+h6{
+color: #105652;
+}
+
+.cards{
+padding: 5%
+}
+.edit_restaurant:valid{
+width:75%;
+color: #0a4275;
+border-style:visible;
+}
+.edit_restaurant:focus{
+background:#fff
+}
+.edit-span{
+width:25%
+}
+
+.info{
+padding: 5% 20%;
+background: #E6DDC4;
+}
+.info-data h2, .info-data p{
+color:#396EB0;
+padding:0% 5%;
+}
+#footer p{
+color:#105652;
+}
